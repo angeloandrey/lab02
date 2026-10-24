@@ -3,13 +3,6 @@ name: Simple Local
 on: push
 
 jobs:
-  first-job:
-    runs-on: ubuntu-latest
-name: Simple Local
-
-on: push
-
-jobs:
   build-node:
     runs-on: ubuntu-latest
     container: node:18
@@ -19,6 +12,4 @@ jobs:
       - uses: actions/checkout@v3
       - run: npm install
       - run: npm install --save moment
-      - run: node app.js    steps:
-      - name: Diga oi
-        run: echo "Hello World!"
+      - run: node app.js
